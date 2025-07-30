@@ -16,39 +16,7 @@ import { RightContainer } from "../right-container/right-container";
   </div>
 </div>`,
   imports: [LeftContainer, RightContainer],
-  styles:
-  `
-  .app-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #d6d7da;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .weather-container {
-    height: 85vh;
-    width: 65vw;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .left-container {
-    flex: 3;
-    background-color: #ffffff;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-  }
-
-  .right-container {
-    flex: 7;
-    background-color: #f6f6f8;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-  `
+    styleUrls: ["./weather.css"],
 })
 export class WeatherComponent {
   // Weather component logic goes here

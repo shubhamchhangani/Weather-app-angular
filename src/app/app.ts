@@ -8,7 +8,7 @@ import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LeftContainer, RightContainer, FontAwesomeModule, NgIf,],
+  imports: [RouterOutlet,FontAwesomeModule, NgIf,],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
