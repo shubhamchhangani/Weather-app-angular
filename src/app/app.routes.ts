@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { AuthPage } from './Auth/auth';
-import { UsersPage } from './Users/users';
+import { WeatherComponent } from './Weather/weather';
 import { App } from './app';
 import { authGuard } from './Services/authGuard';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
   { path: 'auth', component: AuthPage },
-  { path: 'users', component: UsersPage, canActivate: [authGuard] },
-  { path: '', component: App, canActivate: [authGuard] }
+  { path: 'weather', component: WeatherComponent, canActivate: [authGuard] },
+  { path: '**', redirectTo: '/auth' }
 ];

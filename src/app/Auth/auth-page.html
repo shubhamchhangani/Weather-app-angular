@@ -1,15 +1,28 @@
 <div class="auth-container">
-  <h2>{{ isSignIn ? 'Sign In' : 'Sign Up' }}</h2>
-  <form (ngSubmit)="onSubmit()">
-    <div *ngIf="!isSignIn">
-      <input type="text" placeholder="Name" [(ngModel)]="name" name="name" required />
-    </div>
-    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
-    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
-    <button type="submit">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</button>
-    <div class="error" *ngIf="error">{{ error }}</div>
+  <h2 class="auth-title">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</h2>
+  <form class="auth-form" (ngSubmit)="onSubmit()">
+    <input
+      class="auth-input"
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      required
+    />
+    <input
+      class="auth-input"
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      name="password"
+      required
+    />
+    <button type="submit" class="auth-submit">
+      {{ isSignIn ? 'Sign In' : 'Sign Up' }}
+    </button>
+    <div class="auth-error" *ngIf="error">{{ error }}</div>
   </form>
-  <button (click)="isSignIn = !isSignIn">
+  <button class="auth-toggle" (click)="isSignIn = !isSignIn">
     {{ isSignIn ? 'Need an account? Sign Up' : 'Already have an account? Sign In' }}
   </button>
 </div>

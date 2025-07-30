@@ -25,9 +25,9 @@ export class AuthPage {
       if (this.isSignIn) {
         await this.auth.signIn(this.email, this.password);
       } else {
-        await this.auth.signUp(this.name, this.email, this.password);
+        await this.auth.signUp(this.email, this.password);
       }
-      this.router.navigate(['/']);
+      this.router.navigate(['/weather']);
     } catch (e: any) {
       this.error = e.message;
     }
